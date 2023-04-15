@@ -115,8 +115,92 @@ header a:hover {
   padding: 100px 170px 100px 32px;
 }
 .bridgePhoto {
-  width: 740px;
-  height: auto;
+  max-width: 100%;
+  display: block;
+}
+.sightseeing {
+  background: #f4f2f2;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.sightseeing h2 {
+  color: #989189;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  line-height: 1.2;
+  text-align: center;
+}
+.sightseeing h3 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.2;
+  color: var(--black);
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.grid-3-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.card {
+  background: linear-gradient(
+    0.15deg,
+    #dfdbd0 0.12%,
+    rgba(223, 219, 208, 0) 99.85%
+  );
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.14));
+  border-radius: 2px;
+}
+.card img {
+  max-width: 100%;
+  display: block;
+  margin-top: 40px;
+}
+.card-body {
+  padding: 32px;
+  max-width: 370px;
+}
+.card-body h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--black);
+  letter-spacing: 0;
+  text-align: left;
+}
+.card-body p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 16px;
+  color: #524e4a;
+}
+.card-body h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: left;
+}
+.btn-card {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: auto;
+  background: #de7c33;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
+  border-radius: 2px;
+  padding: 12px 70px;
+}
+.btn-card:hover {
+  background: #e1a271;
 }
 footer {
   color: var(--white);
@@ -164,9 +248,6 @@ footer a {
   font-weight: 700;
 }
 @media (max-width: 1280px) {
-  .bridgePhoto {
-    max-width: 640px;
-  }
   .about-descr {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -174,9 +255,6 @@ footer a {
   }
 }
 @media (max-width: 1024px) {
-  .bridgePhoto {
-    max-width: 512px;
-  }
   .about-descr {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -191,10 +269,14 @@ footer a {
   .grid {
     padding: 20px;
   }
+  .btn-card {
+    font-size: 12px;
+    padding: 12px 40px;
+  }
 }
 @media (max-width: 912px) {
   .bridgePhoto {
-    display:none;
+    display: none;
   }
   .about-page {
     grid-template-columns: 1fr 5fr;
@@ -202,11 +284,24 @@ footer a {
 }
 @media (max-width: 820px) {
   .bridgePhoto {
-    display:none;
+    display: none;
   }
   .about-page {
     grid-template-columns: 1fr 5fr;
   }
+  .btn-card {
+    font-size: 12px;
+    letter-spacing: 1;
+    padding: 12px 20px;
+  }
+  .card-body h2 {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .card-body p {
+    font-size: 14px;
+  }
+
 }
 @media (max-width: 540px) {
   header h1 {
@@ -223,7 +318,7 @@ footer a {
     padding-top: 100px;
   }
   .bridgePhoto {
-    display:none;
+    display: none;
   }
   .about-page {
     grid-template-columns: 1fr;
@@ -234,6 +329,10 @@ footer a {
   }
   .grid {
     grid-template-columns: 1fr;
+  }
+  .card {
+    margin-right: 40px;
+    margin-left: 40px;
   }
   .footer-one {
     margin-left: 20px;
@@ -247,4 +346,22 @@ footer a {
     margin-left: 20px;
     margin-right: 20px;
   }
+}
+@media (max-width: 280px) {
+  .btn-card {
+    font-size: 12px;
+    letter-spacing: 1;
+    padding: 12px 20px;
+  }
+  .card-body h2 {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .card-body p {
+    font-size: 14px;
+  }
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+}
 }
