@@ -63,6 +63,7 @@ header a {
   backdrop-filter: blur(30px);
   border-radius: 2px;
   padding: 12px 40px;
+  transition: 500ms ease-in-out;
 }
 header a:hover {
   background: linear-gradient(
@@ -198,6 +199,7 @@ header a:hover {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.14);
   border-radius: 2px;
   padding: 12px 70px;
+  transition: 300ms ease-in-out;
 }
 .btn-card:hover {
   background: #e1a271;
